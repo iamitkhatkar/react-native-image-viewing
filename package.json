@@ -22,7 +22,8 @@
   },
   "peerDependencies": {
     "react": ">=16.11.0",
-    "react-native": ">=0.61.3"
+    "react-native": ">=0.61.3",
+    "react-native-fast-image": "^8.3.4"
   },
   "files": [
     "dist",

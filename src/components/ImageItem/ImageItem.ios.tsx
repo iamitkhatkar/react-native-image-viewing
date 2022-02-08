@@ -19,7 +19,8 @@ import {
   TouchableWithoutFeedback,
   GestureResponderEvent,
 } from "react-native";
-
+import FastImage from "react-native-fast-image";
+const AnimatedFastImage = Animated.createAnimatedComponent(FastImage);
 import useDoubleTapToZoom from "../../hooks/useDoubleTapToZoom";
 import useImageDimensions from "../../hooks/useImageDimensions";
 
@@ -137,7 +138,7 @@ const ImageItem = ({
           onLongPress={onLongPressHandler}
           delayLongPress={delayLongPress}
         >
-          <Animated.Image
+          <AnimatedFastImage
             source={imageSrc}
             style={imageStylesWithOpacity}
             onLoad={() => setLoaded(true)}

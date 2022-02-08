@@ -113,20 +113,7 @@ const ImageItem = ({
   };
 
   return (
-    <Animated.ScrollView
-      ref={imageContainer}
-      style={styles.listItem}
-      pagingEnabled
-      nestedScrollEnabled
-      showsHorizontalScrollIndicator={false}
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={styles.imageScrollContainer}
-      scrollEnabled={swipeToCloseEnabled}
-      {...(swipeToCloseEnabled && {
-        onScroll,
-        onScrollEndDrag,
-      })}
-    >
+    <>
       <Animated.Image
         {...panHandlers}
         source={imageSrc}
@@ -134,7 +121,7 @@ const ImageItem = ({
         onLoad={onLoaded}
       />
       {(!isLoaded || !imageDimensions) && <ImageLoading />}
-    </Animated.ScrollView>
+    </>
   );
 };
 
